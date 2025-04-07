@@ -3,6 +3,7 @@ import { Sky, PointerLockControls, KeyboardControls } from "@react-three/drei";
 import { Physics } from "@react-three/rapier";
 import { Ground } from "./Ground";
 import { Player } from "./Player";
+import { Cube, Cubes } from "./Cube";
 
 export default function App() {
   return (
@@ -22,6 +23,8 @@ export default function App() {
         <Physics gravity={[0, -30, 0]}>
           <Ground />
           <Player />
+          <Cube position={[0, 0.5, -10]} />
+          <Cubes />
         </Physics>
         <PointerLockControls />
       </Canvas>
