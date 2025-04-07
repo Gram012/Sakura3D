@@ -1,5 +1,5 @@
 {
-  "name": "minecraft",
+  "name": "sakura3d",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -41,7 +41,7 @@
   "keywords": [
     "pointerlock-controls",
     "game",
-    "minecraft"
+    "3D player env"
   ],
-  "description": "Mini Minecraft implementation."
+  "description": "Sakura3D"
 }
