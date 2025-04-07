@@ -17,7 +17,7 @@ export function Player({ lerp = THREE.MathUtils.lerp }) {
   useFrame((state) => {
     const { forward, backward, left, right, jump } = get();
     const velocity = ref.current.linvel();
-    // update camera
+
     state.camera.position.set(...ref.current.translation());
     frontVector.set(0, 0, backward - forward);
     sideVector.set(left - right, 0, 0);
@@ -27,6 +27,7 @@ export function Player({ lerp = THREE.MathUtils.lerp }) {
       .multiplyScalar(SPEED)
       .applyEuler(state.camera.rotation);
     ref.current.setLinvel({ x: direction.x, y: velocity.y, z: direction.z });
+
     // jumping
     const world = rapier.world.raw();
     const ray = world.castRay(
